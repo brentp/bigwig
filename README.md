@@ -17,11 +17,11 @@ func main() {
 	bw, err := bigwig.Open("test.bw")
 	log.Println(err)
 
-	// give chrom, start, end, get []float64
+	// give chrom, start, end, get []float64 of non-nil values
 	vals := bw.Values("1", 0, 9)
 	log.Println(vals)
 
-	// give chrom, start, end, get float64 of non-nil values
+	// give chrom, start, end, get float64 mean of non-nil values
 	mean := bw.Mean("1", 0, 9)
 	log.Println(mean)
 }
@@ -34,7 +34,7 @@ type BigWig struct {
 }
 ```
 
-BigWig hold the methods that access the underlying C library.
+BigWig holds the methods that access the underlying C library.
 
 #### func  Open
 
