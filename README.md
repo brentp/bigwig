@@ -1,11 +1,5 @@
 bigwig
 ======
-
-
-
-# bigwig
---
-
 bigwig reads bigwig files via Devon Ryan's C library.
 
 ## Usage
